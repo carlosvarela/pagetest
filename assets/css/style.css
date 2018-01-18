@@ -1,0 +1,293 @@
+/* 
+
+Name: Page Test 
+Author: Carlos Varela 
+Version: 1.0
+ --COLOR BASE -- 
+ background rose: #ffcaca 
+ header and text: #865656 
+ background white: #ffffff;
+
+ */
+
+ * {
+     -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+     box-sizing: border-box;
+}
+
+ body {
+     font-family: 'Open Sans', sans-serif;
+}
+/* * -- BASE STYLES -- * Most of these are inherited from Base, but I want to change a few. */
+ body {
+     line-height: 1.7em;
+     color: #7f8c8d;
+     font-size: 13px;
+}
+ h1, h2, h3, h4, h5, h6, label {
+     color: #34495e;
+}
+ .text-rose {
+     color: #865656 
+}
+ .bg-rose {
+     background-color: #ffcaca 
+}
+ .bg-white {
+     background-color: #ffffff 
+}
+ .pure-img-responsive {
+     max-width: 100%;
+     height: auto;
+}
+/* * -- LAYOUT STYLES -- * These are some useful classes which I will need */
+ .l-box {
+     padding: 1em;
+}
+ .l-box-lrg {
+     padding: 2em;
+     border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+ .is-center {
+     text-align: center;
+}
+/* * -- PURE FORM STYLES -- * Style the form inputs and labels */
+ .pure-form label {
+     margin: 1em 0 0;
+     font-weight: bold;
+     font-size: 100%;
+}
+ .pure-form input[type] {
+     border: 2px solid #ddd;
+     box-shadow: none;
+     font-size: 100%;
+     width: 100%;
+     margin-bottom: 1em;
+}
+/* * -- MENU STYLES -- * I want to customize how my .pure-menu looks at the top of the page */
+ .home-menu {
+     padding: 0.5em;
+     text-align: center;
+    ;
+}
+ .home-menu {
+     background: #ffcaca;
+}
+ .pure-menu.pure-menu-fixed {
+    /* Fixed menus normally have a border at the bottom. */
+     border-bottom: none;
+    /* I need a higher z-index here because of the scroll-over effect. */
+     z-index: 4;
+}
+ .home-menu .pure-menu-heading {
+     color: #865656 ;
+     font-weight: 400;
+     font-size: 100%;
+     text-transform: uppercase;
+     letter-spacing: 2.5px 
+}
+ .home-menu .pure-menu-selected a {
+     color: white;
+}
+ .home-menu a {
+     color: #865656 ;
+     text-transform: uppercase;
+     font-weight: bold;
+}
+ li.pure-menu-item {
+     font-size: .7em;
+}
+ .home-menu li a:hover, .home-menu li a:focus {
+     background: none;
+     border: none;
+     color: #9a6d6d;
+}
+ li.pure-menu-item.pure-menu-selected.menu-logo {
+     padding-top: 16px;
+}
+ #menu-logo {
+     background-color: white;
+     height:70%;
+     text-overflow: hidden;
+     border-radius: 50px;
+     padding: 13px 3px;
+}
+ #menu-logo a {
+     color: #865656 !important;
+     margin-top: 1% ;
+     font-weight: 800 !important;
+     font-size:125%;
+}
+ li.pure-menu-item #menu-logo {
+     width: 21%;
+     padding: 0 
+}
+ .pure-menu-item {
+     padding: 5% 1%;
+}
+/* * -- SPLASH STYLES -- * This is the rose top section that appears on the page. */
+ .splash-container {
+     background: #ffcaca;
+     z-index: 1;
+     overflow: hidden;
+    /* The following styles are required for the "scroll-over" effect */
+     width: 100%;
+     height: 88%;
+     top: 0;
+     left: 0;
+     position: fixed !important;
+}
+ .splash {
+    /* absolute center .splash within .splash-container */
+     width: 100%;
+     height:545px;
+     margin: auto;
+     position: absolute;
+     top: 10px;
+     left: 0;
+     bottom: 0;
+     right: 0;
+     text-align: center;
+     text-transform: capitalize;
+     font-weight: bold 
+}
+/* This is the main heading that appears on slider section */
+ .splash-head {
+     font-size: 4em;
+     font-weight: bold;
+     color: #855555;
+     padding-top:1%;
+     font-weight: bold;
+     line-height: 1em;
+}
+ h1.splash-head {
+     color: #855555;
+}
+/* This is the subheading that appears on slider section */
+ .splash-subhead {
+     color: rgba(255, 255, 255, 0.25);
+     letter-spacing: 0.05em;
+     opacity: 0.8;
+     font-size:300%;
+     margin-top: 0;
+     padding: 0;
+}
+/* * -- CONTENT STYLES -- * This represents the content area (everything below the blue section) */
+ .content-wrapper {
+    /* These styles are required for the "scroll-over" effect */
+     position: absolute;
+     top: 55%;
+     width: 100%;
+     min-height: 12%;
+     z-index: 2;
+     background: white;
+     padding:2%;
+     color: #865656;
+}
+/* We want to give the content area some more padding */
+ .content {
+     padding: 1em 1em 3em;
+}
+/* This is the class used for the main content headers (<h2>) */
+ .content-head {
+     font-weight: 400;
+     text-transform: uppercase;
+     letter-spacing: 0.1em;
+     margin: 2em 0 1em;
+}
+/* This is a modifier class used when the content-head is inside a ribbon */
+ .content-head-ribbon {
+     color: white;
+}
+/* This is the class used for the content sub-headers (<h3>) */
+ .content-subhead {
+     color: #865656;
+}
+ .content-subhead i {
+     margin-right: 7px;
+}
+/* This is the class used for the dark-background areas. */
+ .ribbon {
+     background: #2d3e50;
+     color: #aaa;
+}
+/* This is the class used for the footer */
+ .footer {
+     background: #fff;
+     position: fixed;
+     bottom: 0;
+     width: 100%;
+}
+/* * -- TABLET (AND UP) MEDIA QUERIES -- * On tablets and other medium-sized devices, we want to customize some * of the mobile styles. */
+ @media (min-width: 48em) {
+    /* We increase the body font size */
+     body {
+         font-size: 16px;
+    }
+    /* We can align the menu header to the left, but float the menu items to the right. */
+     .home-menu {
+         text-align: center;
+    }
+     .home-menu ul {
+         margin-top: 0 auto 
+    }
+    /* We increase the height of the splash-container */
+    /* .splash-container {
+         height: 500px;
+    }
+    */
+    /* We decrease the width of the .splash, since we have more width to work with */
+     .splash {
+         width: 90%;
+         height:80%;
+    }
+  
+     .splash-subhead {
+         font-size: 6em 
+    }
+    /* We remove the border-separator assigned to .l-box-lrg */
+     .l-box-lrg {
+         border: none;
+    }
+}
+/* * -- DESKTOP (AND UP) MEDIA QUERIES -- * On desktops and other large devices, we want to over-ride some * of the mobile and tablet styles. */
+ @media (min-width: 78em) {
+    /* We increase the header font size even more */
+     .splash-head {
+         font-size: 5em 
+    }
+     .splash {
+         width: 90%;
+         height:545px;
+    }
+     .pure-menu-item {
+         padding: 2em 4em;
+    }
+}
+ @media only screen and (min-device-width : 375px) and (max-device-width : 667px) {
+     #menu-logo {
+         background-color: white;
+         text-overflow: hidden;
+         border-radius: 90px;
+         padding: 3px 5px;
+    }
+     .pure-menu-item {
+         padding: 1em 1em;
+    }
+     .splash-head {
+         margin-top: 3em;
+         font-size: 3em 
+    }
+     p.splash-subhead {
+         font-size: 3em !important;
+    }
+     #menu-logo {
+         background-color: white;
+         height:90%;
+         text-overflow: hidden;
+         border-radius: 50px;
+         padding: 13px 3px;
+    }
+}
+ 
